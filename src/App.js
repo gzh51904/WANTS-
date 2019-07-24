@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Home from "./pages/Home/index.jsx";
 import Cart from "./pages/Cart/index.jsx";
 import Mine from "./pages/Mine/index.jsx";
-import { Route, Switch, Redirect, withRouter } from "react-router-dom";
+import Login from "./pages/Login/index.jsx"
+import { Route, Switch, NavLink, Redirect, withRouter } from "react-router-dom";
 require('./App.css');
 require('./iconfont/iconfont.css');
 
@@ -38,29 +39,31 @@ class App extends Component {
       ],
       isSelect: 0
     }
-    this.goto = this.goto.bind(this)
+
   }
-  goto(path, e) {
-    let { history } = this.props
-    history.push(path)
-  }
+
   render() {
     let { data } = this.state
     return (
       <div className="App" id="App">
+        {/* 路由配置 */}
         <Switch>
           {
             data.map(item => <Route key={item.name} path={item.path} component={AllRouter[item.name]} />)
           }
+          <Route path="/login" component={Login}></Route>
           <Redirect from="/" to="/home" exact />
         </Switch>
+
         <ul className="Appul">
           {
             data.map((item, i) => {
-              return <li className='Appli' key={item.name} onClick={this.goto.bind(this, item.path)}>
+              return <NavLink className='Appli'
+                activeStyle={{ color: 'yellow' }}
+                key={item.name} to={item.path}>
                 <i className={item.icon}></i>
                 <span> {item.title}</span>
-              </li>
+              </NavLink>
 
             })
           }

@@ -1,0 +1,23 @@
+.Home{
+
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top : 8px;
+    padding-bottom : 8px;
+    box-sizing: border-box;
+    background: yellow
+}
+.header span input{
+width: 320px;
+}
+.header img{
+    width: 25px;
+    height: 25px;
+    background: red;
+}
+.header>i{
+font-size: 25px
+}
