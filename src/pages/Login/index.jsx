@@ -4,11 +4,15 @@ import {Input,Button} from 'antd'
 class Login extends Component {
     constructor(){
         super();
+        this.state={
+            random:'获取验证码'
+        }
         this.getrandom=this.getrandom.bind(this)
     }
     getrandom(e){
-        console.log(e)
-        e.target.value='123'
+        this.setState({
+            random:'5678'
+        })
     }
     render() {
         return (
@@ -25,7 +29,8 @@ class Login extends Component {
                     <span onClick={this.getrandom.bind(this)}
                      style={{display:'inline-block',
                     width:'30%',border:'1px solid #ccc',
-                     padding:'2.85% 0',borderLeft:'none',borderTopRightRadius:'100px',borderBottomRightRadius:'100px',textAlign:"center"}}>获取验证码</span></div>
+                     padding:'2.85% 0',borderLeft:'none',borderTopRightRadius:'100px',
+                     borderBottomRightRadius:'100px',textAlign:"center"}}>{this.state.random}</span></div>
                          <Button style={{borderRadius:'100px',background:'#57cb94',
                          border:'0 solid #57cb94',
                     margin:'10% 0',textAlign:'center'}} type="primary" block> 登录</Button>

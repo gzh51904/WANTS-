@@ -4,7 +4,7 @@ import Jujia from "./ChildHome/Jujia.jsx"
 import Fuzhuang from "./ChildHome/Fuzhuang.jsx"
 import Xiexue from "./ChildHome/Xiexue.jsx"
 import Baolei from "./ChildHome/Baolei.jsx"
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { Input, Menu } from 'antd';
 require('../../iconfont/iconfont.css');
 require('./index.css');

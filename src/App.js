@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Home from "./pages/Home/index.jsx";
 import Cart from "./pages/Cart/index.jsx";
 import Mine from "./pages/Mine/index.jsx";
-import Login from "./pages/Login/index.jsx"
+import Login from "./pages/Login/index.jsx";
+import Lists from './pages/Lists/index.jsx';
+import Goods from './pages/Goods/index.jsx';
 import { Route, Switch, NavLink, Redirect, withRouter } from "react-router-dom";
 require('./App.css');
 require('./iconfont/iconfont.css');
@@ -35,11 +37,9 @@ class App extends Component {
           title: "我的",
           icon: "iconfont icon-wode"
         }
-
       ],
       isSelect: 0
     }
-
   }
 
   render() {
@@ -52,9 +52,10 @@ class App extends Component {
             data.map(item => <Route key={item.name} path={item.path} component={AllRouter[item.name]} />)
           }
           <Route path="/login" component={Login}></Route>
+          <Route path="/lists/:id" component={Lists}></Route>
+          <Route path="/goods/:id" component={Goods}></Route>
           <Redirect from="/" to="/home" exact />
         </Switch>
-
         <ul className="Appul">
           {
             data.map((item, i) => {
@@ -64,7 +65,6 @@ class App extends Component {
                 <i className={item.icon}></i>
                 <span> {item.title}</span>
               </NavLink>
-
             })
           }
         </ul>
