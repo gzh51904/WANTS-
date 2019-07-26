@@ -3,6 +3,7 @@ import Zhuye from "./xuanran/zhuye/index.jsx"
 import Shezhi from "./xuanran/shezhi/index.jsx"
 import Dingdan from "./xuanran/dingdanxiangqing/index.jsx"
 import Xiaoxi from "./xuanran/xiaoxi/index.jsx"
+import Sousuo from "./xuanran/sousuo/index.jsx"
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 require('./App.css');
 
@@ -30,6 +31,11 @@ class App extends Component {
           name: "Xiaoxi",
           path: "/xiaoxi",
           title: "我的订单",
+        },
+        {
+          name: "Sousuo",
+          path: "/sousuo",
+          title: "搜索输入框",
         }
       ],
       path: "/zhuye/home",
@@ -44,6 +50,7 @@ class App extends Component {
           <Route path="/shezhi" component={Shezhi}></Route>
           <Route path="/dingdan" component={Dingdan}></Route>
           <Route path="/xiaoxi" component={Xiaoxi}></Route>
+          <Route path="/sousuo" component={Sousuo}></Route>
           <Redirect from="/" to="/zhuye/home"></Redirect>
         </Switch>
       </div>

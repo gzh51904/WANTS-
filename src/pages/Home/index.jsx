@@ -43,11 +43,14 @@ class Home extends Component {
                 }
             ],
             xiaoxi: "/xiaoxi",
-            current: 'Tuijian'
+            current: 'Tuijian',
+            sousuo: "/sousuo"
+
         }
         // 改变This指向
         this.handleClick = this.handleClick.bind(this)
         this.goto = this.goto.bind(this)
+        this.goto1 = this.goto1.bind(this)
     }
     handleClick(data) {
         this.setState({
@@ -62,8 +65,11 @@ class Home extends Component {
     goto(xiaoxi) {
         this.props.history.push({ pathname: xiaoxi, query: "/zhuye/home" })
     }
+    goto1(sousuo) {
+        this.props.history.push(sousuo)
+    }
     render() {
-        let { data, current, xiaoxi } = this.state
+        let { data, current, xiaoxi, sousuo } = this.state
         return (
             <div className="Home">
                 <div>
@@ -72,7 +78,7 @@ class Home extends Component {
                         <Search
                             placeholder="潮流新品特卖"
                             onSearch={value => console.log(value)}
-                            style={{ width: 300 }}
+                            style={{ width: 300 }} onClick={this.goto1.bind(this, sousuo)}
                         />
                         <i className="iconfont icon-xiaoxi" onClick={this.goto.bind(this, xiaoxi)}></i>
                     </div>
