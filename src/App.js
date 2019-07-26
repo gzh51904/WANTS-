@@ -34,7 +34,6 @@ class App extends Component {
       ],
       path: "/zhuye/home",
     }
-
   }
   render() {
     let { data } = this.state
