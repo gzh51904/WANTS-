@@ -1,0 +1,28 @@
+.Xiaoxi{
+    flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.Xiaoxi .header{
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    text-align: center;
+}
+.Xiaoxi .header i{
+    position: absolute;
+    left: 10px;
+}
+.Xiaoxi .content{
+    flex: 1;
+    overflow-y: auto;
+}
+.Xiaoxi .content i{
+    font-size: 80px;
+    color: yellowgreen;
+}
+.Xiaoxi .content div {
+    margin-top: 50px;
+    text-align: center;
+}

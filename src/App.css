@@ -1,35 +1,4 @@
-a{
-    text-decoration:none;
-    color:#111
-}
-#App{
+.App{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.Appul{
-    display: flex;
-    justify-content: space-around;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 8px;
-    border-top: 1px solid #cccccc;
-    padding-top: 10px;
-}
-.Appli{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center
-}
-.Appli i{
-    font-size: 20px
-}
-.Appli span{
-    font-size: 12px
-}
-.activeted{
-    color:#fff;
-    background: #f60;
+width: 100%;
 }

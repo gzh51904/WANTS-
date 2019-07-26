@@ -1,0 +1,12 @@
+.Dingdanxiangqing .header{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    background:#fff;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #ccc;
+}
+.Dingdanxiangqing .header i {
+    position: absolute;
+    left: 5px;
+}

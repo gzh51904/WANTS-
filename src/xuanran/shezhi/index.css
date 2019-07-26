@@ -1,0 +1,33 @@
+.shezhi{
+   background:rgb(247, 247, 247);
+   height: 100%;
+}
+.shezhi .header{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    background:#fff;
+    margin-bottom: 4px;
+}
+.shezhi .header i {
+    position: absolute;
+    left: 5px;
+}
+.shezhi div:nth-child(2) div{
+display: flex;
+justify-content: space-between;
+margin: 0 4px;
+background: #fff;
+margin-bottom: 4px;
+padding: 10px 8px;
+box-sizing: border-box;
+}
+.shezhi>div:nth-child(3){
+    text-align: center;
+    background: #fff;
+    padding: 10px 0;
+    margin: 0 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: rgb(221, 218, 33)
+}

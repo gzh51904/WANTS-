@@ -1,0 +1,7 @@
+.Tuijian{
+    flex: 1;
+    overflow-y: auto;
+}
+.Tuijian::-webkit-scrollbar {
+    display: none;
+}

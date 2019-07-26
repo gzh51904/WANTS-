@@ -1,0 +1,137 @@
+.Mine{
+    background: #fefeef;
+    flex: 1;
+    overflow-y: auto 
+}
+.Mine::-webkit-scrollbar {
+    display: none;
+}
+ul li{
+    list-style: none;
+}
+.Mine .header{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 10px 5px 10px ;
+    box-sizing: border-box;
+    background: #fff;
+}
+.Mine .header i{
+    font-size: 25px
+}
+.Mine .geren{
+    margin: 4px 0px 4px 0px;
+    padding: 20px ;
+    box-sizing: border-box;
+    background: #fff;
+}
+.Mine .geren img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.Mine .geren span{
+    font-size: 20px;
+    margin-left: 30px;
+}
+.Mine .dingdan{
+    background: #fff;
+    padding:0 3px 0 3px;
+    margin-bottom: 4px;
+}
+.Mine .dingdan div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: .5px solid #eee;
+}
+.Mine .dingdan div:nth-child(1) p{
+    margin-bottom: 0;
+}
+.Mine .dingdan div:nth-child(1) p span{
+    margin-right: 3px
+}
+.Mine .dingdan ul{
+    display: flex;
+    justify-content: space-around;
+    padding:10px 0 10px 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+.Mine .dingdan ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Mine .dingdan ul li i{
+    font-size: 25px;
+    color: yellowgreen
+}
+.Mine .xinxi{
+    display: flex;
+    padding:10px 0 10px 0;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    background: #fff;
+}
+.Mine .xinxi li{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Mine .xinxi li i{
+    font-size: 25px;
+}
+.Mine .xinxi li:nth-child(5),
+.Mine .xinxi li:nth-child(6){
+    margin-top: 20px
+}
+.Mine .cainixihuan{
+    background: #fff
+}
+.Mine .cainixihuan{
+    margin-bottom: 0;
+}
+.Mine .cainixihuan div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.Mine .cainixihuan div:nth-child(1) i{
+    width: 50px;
+    height: 1px;
+    background: #666;
+}
+.Mine .cainixihuan div:nth-child(1) span{
+    margin: 0 10px 0 10px;
+}
+.Mine .cainixihuan ul{
+    width: 100%;
+    display: flex;
+    padding: 10px 0 0 0;
+    flex-wrap: wrap;
+    background: #fff;
+}
+.Mine .cainixihuan ul li{
+    width: 50%;
+}
+.Mine .cainixihuan ul li img{
+    width: 100%;
+    height: 200px;
+}
+.Mine .cainixihuan ul li p{
+    overflow: hidden;
+    text-overflow:ellipsis;
+     white-space: nowrap;
+     margin: 8px 3px 8px 3px;
+}
+.Mine .cainixihuan ul li span{
+    color: red;
+    display: block;
+    margin: 0px 3px 8px 3px;
+}

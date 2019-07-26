@@ -1,74 +1,52 @@
 import React, { Component } from 'react';
-import Home from "./pages/Home/index.jsx";
-import Cart from "./pages/Cart/index.jsx";
-import Mine from "./pages/Mine/index.jsx";
-import Login from "./pages/Login/index.jsx"
-import { Route, Switch, NavLink, Redirect, withRouter } from "react-router-dom";
+import Zhuye from "./xuanran/zhuye/index.jsx"
+import Shezhi from "./xuanran/shezhi/index.jsx"
+import Dingdan from "./xuanran/dingdanxiangqing/index.jsx"
+import Xiaoxi from "./xuanran/xiaoxi/index.jsx"
+import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 require('./App.css');
-require('./iconfont/iconfont.css');
 
-let AllRouter = {
-  Home,
-  Cart,
-  Mine
-}
 class App extends Component {
   constructor() {
     super();
     this.state = {
       data: [
         {
-          name: "Home",
-          path: "/home",
-          title: "首页",
-          icon: "iconfont icon-shouye"
+          name: "Zhuye",
+          path: "/zhuye",
+          title: "主页",
         },
         {
-          name: "Cart",
-          path: "/cart",
-          title: "购物车",
-          icon: "iconfont icon-gouwuchekong"
+          name: "Shezhi",
+          path: "/shezhi",
+          title: "系统设置",
         },
         {
-          name: "Mine",
-          path: "/mine",
-          title: "我的",
-          icon: "iconfont icon-wode"
+          name: "Dingdan",
+          path: "/dingdan",
+          title: "我的订单",
+        },
+        {
+          name: "Xiaoxi",
+          path: "/xiaoxi",
+          title: "我的订单",
         }
-
       ],
-      isSelect: 0
+      path: "/zhuye/home",
     }
 
   }
-
   render() {
     let { data } = this.state
     return (
-      <div className="App" id="App">
-        {/* 路由配置 */}
+      <div className="App">
         <Switch>
-          {
-            data.map(item => <Route key={item.name} path={item.path} component={AllRouter[item.name]} />)
-          }
-          <Route path="/login" component={Login}></Route>
-          <Redirect from="/" to="/home" exact />
+          <Route path="/zhuye" component={Zhuye}></Route>
+          <Route path="/shezhi" component={Shezhi}></Route>
+          <Route path="/dingdan" component={Dingdan}></Route>
+          <Route path="/xiaoxi" component={Xiaoxi}></Route>
+          <Redirect from="/" to="/zhuye/home"></Redirect>
         </Switch>
-
-        <ul className="Appul">
-          {
-            data.map((item, i) => {
-              return <NavLink className='Appli'
-                activeStyle={{ color: 'yellow' }}
-                key={item.name} to={item.path}>
-                <i className={item.icon}></i>
-                <span> {item.title}</span>
-              </NavLink>
-
-            })
-          }
-        </ul>
-
       </div>
     );
   }

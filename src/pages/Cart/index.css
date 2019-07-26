@@ -1,0 +1,32 @@
+.Cart{
+    flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.Cart .header{
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    text-align: center;
+}
+.Cart .content{
+    flex: 1;
+    overflow-y: auto;
+}
+.Cart .content i{
+    font-size: 80px;
+    color: yellowgreen;
+}
+.Cart .content div {
+    text-align: center;
+}
+.Cart .content div div span:nth-child(2){
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 4px;
+    border:1px solid #666;
+    margin-left: 10px;
+font-weight: bold;
+}

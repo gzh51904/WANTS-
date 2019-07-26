@@ -1,7 +1,13 @@
 .Home{
-
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
 }
-.header{
+.Home::-webkit-scrollbar {
+    display: none;
+}
+.Home .header{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -10,14 +16,14 @@
     box-sizing: border-box;
     background: yellow
 }
-.header span input{
-width: 320px;
+.Home .header span input{
+width: 300px;
 }
-.header img{
+.Home .header img{
     width: 25px;
     height: 25px;
     background: red;
 }
-.header>i{
+.Home .header>i{
 font-size: 25px
 }
