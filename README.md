@@ -10,7 +10,7 @@ webApp上线地址：http://47.103.6.17:1905
 
 后台管理系统上线地址：http://47.103.6.17:1906
 
-github仓库地址：git@github.com:gzh51904/gaosijiaoyu.git
+github仓库地址：git@github.com:gzh51904/wants.git
 
 ### 团队分工
 
