@@ -1,0 +1,7 @@
+.Jujia{
+    flex: 1;
+    overflow-y: auto;
+}
+.Jujia::-webkit-scrollbar {
+    display: none;
+}

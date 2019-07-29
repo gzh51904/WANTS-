@@ -1,0 +1,7 @@
+.Baolei{
+    flex: 1;
+    overflow-y: auto;
+}
+.Baolei::-webkit-scrollbar {
+    display: none;
+}

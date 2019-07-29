@@ -4,6 +4,9 @@ import Shezhi from "./xuanran/shezhi/index.jsx"
 import Dingdan from "./xuanran/dingdanxiangqing/index.jsx"
 import Xiaoxi from "./xuanran/xiaoxi/index.jsx"
 import Sousuo from "./xuanran/sousuo/index.jsx"
+import Login from "./xuanran/login/index.jsx"
+import Lists from "./xuanran/lists/index.jsx"
+import Goods from "./xuanran/goods/index.jsx"
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 require('./App.css');
 
@@ -36,13 +39,27 @@ class App extends Component {
           name: "Sousuo",
           path: "/sousuo",
           title: "搜索输入框",
+        },
+        {
+          name: "Login",
+          path: "/login",
+          title: "登陆",
+        },
+        {
+          name: "Lists",
+          path: "/lists",
+          title: "商品分类页",
+        },
+        {
+          name: "Goods",
+          path: "/goods",
+          title: "商品详情页",
         }
       ],
       path: "/zhuye/home",
     }
   }
   render() {
-    let { data } = this.state
     return (
       <div className="App">
         <Switch>
@@ -51,7 +68,10 @@ class App extends Component {
           <Route path="/dingdan" component={Dingdan}></Route>
           <Route path="/xiaoxi" component={Xiaoxi}></Route>
           <Route path="/sousuo" component={Sousuo}></Route>
-          <Redirect from="/" to="/zhuye/home"></Redirect>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/lists/:id" component={Lists}></Route>
+          <Route path="/goods/:id" component={Goods}></Route>
+          <Redirect from="/" to="/zhuye/home/tuijian"></Redirect>
         </Switch>
       </div>
     );

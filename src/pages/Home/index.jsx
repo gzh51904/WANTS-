@@ -52,13 +52,20 @@ class Home extends Component {
         this.goto = this.goto.bind(this)
         this.goto1 = this.goto1.bind(this)
     }
+    componentWillMount() {
+        let str = this.props.location.pathname.split('/')[3]
+        if (str) {
+            let current = str.replace(str[0], str[0].toUpperCase())
+            this.setState({
+                current
+            })
+        }
+    }
     handleClick(data) {
         this.setState({
             current: data.key
+
         })
-        // console.log(data);
-        // 路由跳转
-        // 获取点击的路由路径
         let currentRouter = this.state.data.filter(item => item.name === data.key)[0];
         this.props.history.push(currentRouter.path)
     }
@@ -82,7 +89,10 @@ class Home extends Component {
                         />
                         <i className="iconfont icon-xiaoxi" onClick={this.goto.bind(this, xiaoxi)}></i>
                     </div>
-                    <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal" style={{ display: "flex", justifyContent: "space-around", borderBottom: "none", }}>
+                    <Menu onClick={this.handleClick}
+                        selectedKeys={[current]}
+                        mode="horizontal"
+                        style={{ display: "flex", justifyContent: "space-around", borderBottom: "none", }}>
                         {
                             data.map(item => {
                                 return <Menu.Item key={item.name}>
@@ -98,7 +108,7 @@ class Home extends Component {
                     <Route path="/zhuye/home/Fuzhuang" component={Fuzhuang} />
                     <Route path="/zhuye/home/Xiexue" component={Xiexue} />
                     <Route path="/zhuye/home/Baolei" component={Baolei} />
-                    <Redirect from="/home" to="/zhuye/home/tuijian" exact />
+                    <Redirect from="/zhuye/home" to="/zhuye/home/tuijian" exact />
                 </Switch>
             </div>
         )

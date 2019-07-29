@@ -1,0 +1,7 @@
+.Xiexue{
+    flex: 1;
+    overflow-y: auto;
+}
+.Xiexue::-webkit-scrollbar {
+    display: none;
+}

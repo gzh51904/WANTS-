@@ -7,10 +7,16 @@ class Shezhi extends Component {
             data: "/zhuye/mine"
         }
         this.goto = this.goto.bind(this)
+        this.goto1 = this.goto1.bind(this)
     }
     goto(data) {
         let { history } = this.props
         history.push(data)
+    }
+    goto1() {
+        localStorage.removeItem("phone")
+        let { history } = this.props
+        history.push({ pathname: "/login", query: "/zhuye/home/tuijian" })
     }
     render() {
         let { data } = this.state
@@ -34,7 +40,7 @@ class Shezhi extends Component {
                         <i className="iconfont icon-qianjin"></i>
                     </div>
                 </div>
-                <div>退出登录</div>
+                <div onClick={this.goto1}>退出登录</div>
             </div>)
     }
 }

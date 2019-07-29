@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 import { Row, Col, Carousel } from "antd"
-require('./Tuijian.css');
+require('./css/Tuijian.css');
 class Tuijian extends Component {
     constructor() {
         super();
@@ -75,7 +75,7 @@ class Tuijian extends Component {
                     }
                 </div>
                 {/* 9-11 */}
-                {
+                {/* {
                     this.state.blocks.slice(9, 12).map(item => {
 
                         return <Row key={item.block_location}>
@@ -91,6 +91,35 @@ class Tuijian extends Component {
 
                         </Row>
                     })
+                } */}
+                {/* 9 */}
+                <Row>
+                    {this.state.flag ?
+                        this.state.blocks[9].block_items.map(item => {
+                            return <Col key={item.item_id} span={12} onClick={this.goto.bind(this, item.item_target.target_id)}>
+                                <img style={{ width: '100%' }} src={item.item_image} alt="" />
+                            </Col>
+                        }) : null
+                    }
+                </Row>
+
+                {/* 10 */}
+                <Row>
+                    {this.state.flag ?
+                        this.state.blocks[10].block_items.map(item => {
+                            return <Col key={item.item_id} span={8} onClick={this.goto.bind(this, item.item_target.target_id)}>
+                                <img style={{ width: '100%' }} src={item.item_image} alt="" />
+                            </Col>
+                        }) : null
+                    }
+                </Row>
+                {/* 11 */}
+                {this.state.flag ?
+                    this.state.blocks[11].block_items.map(item => {
+                        return <Col key={item.item_id} span={12} onClick={this.goto.bind(this, item.item_target.target_id)}>
+                            <img style={{ width: '100%' }} src={item.item_image} alt="" />
+                        </Col>
+                    }) : null
                 }
                 {/* 12 */}
                 <Row>  {
@@ -117,7 +146,7 @@ class Tuijian extends Component {
                 <Row>  {
                     this.state.flag ?
                         this.state.blocks[14].block_items.map(item => {
-                            return <Col key={item.item_id} span={6} onClick={this.goto.bind(this, item.item_target.target_id)}>
+                            return <Col key={item.item_id} span={12} onClick={this.goto.bind(this, item.item_target.target_id)}>
                                 <img style={{ width: '100%' }} src={item.item_image} alt="" />
                             </Col>
                         }) : null
@@ -137,7 +166,7 @@ class Tuijian extends Component {
                 <Row>  {
                     this.state.flag ?
                         this.state.blocks[16].block_items.map(item => {
-                            return <Col key={item.item_id} span={8} onClick={this.goto.bind(this, item.item_target.target_id)}>
+                            return <Col key={item.item_id} span={6} onClick={this.goto.bind(this, item.item_target.target_id)}>
                                 <img style={{ width: '100%' }} src={item.item_image} alt="" />
                             </Col>
                         }) : null
@@ -197,3 +226,4 @@ class Tuijian extends Component {
     }
 }
 export default Tuijian;
+

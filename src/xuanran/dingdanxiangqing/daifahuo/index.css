@@ -1,0 +1,29 @@
+.daifukuan{
+    flex: 1;
+}
+.daifukuan>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 6px;
+    border: 1px solid #cccccc;
+    padding: 6px;
+    box-sizing: border-box;
+}
+.daifukuan div img{
+    width: 50px;
+    height: 50px;
+}
+.daifukuan .content{
+    height: 90%;
+    overflow-y: auto;
+    border: none;
+}
+.daifukuan .content i{
+    font-size: 80px;
+    color: yellowgreen;
+}
+.daifukuan .content div {
+    margin-top: 50px;
+    text-align: center;
+}

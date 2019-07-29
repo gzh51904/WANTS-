@@ -59,7 +59,16 @@ class Dingdan extends Component {
         let res = this.props.location.query
         this.setState({
             current: res
-        })
+        }) 
+        
+        let str=this.props.location.pathname.split('/')[2]  
+        if(str){
+        let current=str.replace(str[0],str[0].toUpperCase())
+       
+          this.setState({
+              current
+          })
+          }
     }
 
     goto(fanhui) {
@@ -88,7 +97,7 @@ class Dingdan extends Component {
                 </div>
                 <Switch>
                     <Route path="/dingdan/daifukuan" component={Daifukuan} />
-                    <Route path="/dingdan/daifahuo" component={Daifukuan} />
+                    <Route path="/dingdan/daifahuo" component={Daifahuo} />
                     <Route path="/dingdan/daishouhuo" component={Daishouhuo} />
                     <Route path="/dingdan/daipingjia" component={Daipingjia} />
                     <Route path="/dingdan/quanbu" component={Quanbu} />

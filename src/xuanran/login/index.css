@@ -1,0 +1,98 @@
+.login{
+    height: 100%;
+    background: rgb(247,247,247)
+}
+.login .header{
+    padding: 10px 10px;
+    font-size: 18px;
+    background: rgb(247,247,247);
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+.login .xxx{
+    font-size: 20px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+.login .shouji{
+    display: flex;
+    justify-content: center;
+}
+.login .yzm{
+    display: flex;
+    justify-content: center;
+}
+.login .denglu{
+    display: flex;
+    justify-content: center;
+}
+.login .xinxi{
+    display: flex;
+    justify-content: center;
+}
+.login input{
+    border:none;
+    outline:none;
+    width: 78%;
+    height: 50px;
+    margin-bottom: 55px;
+    border-radius: 30px;
+}
+.login .shouji{
+    position: relative;
+}
+.login .shouji .s1{
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 50px;
+    top: 17px;
+    border-right: 1px solid #000;
+    padding-right: 20px;
+}
+/* .login .shouji .s2{
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 110px;
+    top: 17px;
+    background: red;
+    width: 100px;
+    height: 30px;
+} */
+/*  */
+.login .shouji input{
+padding-left: 80px;
+}
+.login .yzm {
+    position: relative;
+}
+.login .yzm .s3{
+    line-height: 16px;
+    font-size: 14px;
+    position: absolute;
+    left: 250px;
+    top: 13px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.login .yzm input{
+    padding-left: 20px;
+}
+.login button{
+    width: 78%;
+    height: 50px;
+    border-radius: 30px;
+    border:none;
+    outline:none;
+    background: rgb(5, 165, 31);
+    font-size: 18px;
+    color: #fff;
+}
+.login .denglu{
+    margin-bottom: 180px;
+}

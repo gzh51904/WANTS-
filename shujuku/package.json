@@ -1,0 +1,24 @@
+{
+  "name": "sanjieduan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "init": "^0.1.2",
+    "install": "^0.12.2",
+    "jsonwebtoken": "^8.5.1",
+    "mogodb": "^3.1.9",
+    "mongodb": "^3.2.7",
+    "mysql": "^2.17.1",
+    "request": "^2.88.0",
+    "token": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

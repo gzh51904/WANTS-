@@ -1,27 +1,44 @@
 .Cart{
     flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .Cart .header{
     font-size: 18px;
     border-bottom: 1px solid #eee;
     padding: 10px 0;
     text-align: center;
+    position: relative;
+}
+.Cart .header .bj{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0,-50%);
+    font-size: 14px;
 }
 .Cart .content{
     flex: 1;
     overflow-y: auto;
 }
-.Cart .content i{
+.Cart .content .mianfei{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+box-sizing: border-box;
+font-size: 12px;
+background: rgb(252, 233, 211);
+margin-bottom: 5px;
+}
+/* .Cart .content i{
     font-size: 80px;
     color: yellowgreen;
-}
+} */
 .Cart .content div {
     text-align: center;
 }
-.Cart .content div div span:nth-child(2){
+.Cart .content div div .guangguang{
     display: inline-block;
     font-size: 12px;
     line-height: 12px;
@@ -29,4 +46,121 @@ justify-content: space-between;
     border:1px solid #666;
     margin-left: 10px;
 font-weight: bold;
+}
+.Cart .content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Cart .d0{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Cart .d0>div:nth-child(1){
+    flex: 1;
+    overflow-y: auto;
+}
+.Cart .d0>div:nth-child(1)::-webkit-scrollbar {
+    display: none;
+}
+.Cart .checked{
+  margin-top: 40px;
+}
+.Cart .d1{
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+}
+.Cart img{
+    width: 100px;height: 100px;
+    background: red;
+}
+.Cart .d3{
+    display: flex;
+    justify-content: space-between;
+}
+.Cart .d3 span{
+   display: block; 
+}
+.Cart .d3 .s1{
+    margin-bottom: 15px;
+ }
+.Cart .content .d2{
+    width: 200px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.Cart .content .d2>p{
+    text-align: left;
+}
+.Cart .content .d3 .span2{
+    border: none;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+.Cart .content .d5{
+    border:1px solid #999;
+    width: 100px;
+    height: 25px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 25px;
+}
+.Cart .content .d5 .shuliang{
+    width: 50px;
+    text-align: center;
+
+}
+.Cart .content .d5 i{
+    width: 25px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+}
+.Cart .content .d5 .i1{
+    border-right: 1px solid #999;
+}
+.Cart .content .d5 .i2{
+    border-left: 1px solid #999;
+}
+
+.Cart .content .d6{
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}
+.Cart .content .d6 .d7{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 70px;
+}
+.Cart .content .d6 .d7 p{
+    margin: 3px;;
+}
+.Cart .content .d6 .d7 p:nth-child(1) span:nth-child(2){
+color: red;
+}
+.Cart .content .d6 .d7 p:nth-child(2){
+    padding-left: 7px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.Cart .content .d6 .d7 p:nth-child(2) span:nth-child(2){
+    margin-right: 5px;
+}
+.Cart .content .d6 .d8{
+    width: 100px;
+    height: 100%;
+text-align: center;
+line-height: 51px;
+font-size: 16px;
 }

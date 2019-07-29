@@ -58,11 +58,13 @@ class Mine extends Component {
                 },
             ],
             xiaoxi: "/xiaoxi",
+            login: "/login",
         }
         this.goto = this.goto.bind(this)
         this.goto1 = this.goto1.bind(this)
         this.goto2 = this.goto2.bind(this)
         this.goto3 = this.goto3.bind(this)
+        this.goto4 = this.goto4.bind(this)
     }
     async componentWillMount() {
         let { data } = await axios.get("http://m.wantscart.com/aggregator/4087/41/entity?token=w1N3dahtnIny9Vaty4WZskJiOcyIDdazFDMriw2bdfNGLwnlmbatVWYnyRXat6EDNszQmIc1gDOazgzdrhNjNdzMDLwv52MaiYmcn6ADdtz1mIsAAAAc%3D%3DQf&Access-Control-Allow-Origin=*");
@@ -87,8 +89,11 @@ class Mine extends Component {
     goto3(xiaoxi) {
         this.props.history.push({ pathname: xiaoxi, query: "/zhuye/mine" })
     }
+    goto4(login) {
+        this.props.history.push(login)
+    }
     render() {
-        let { data, quanbu, xinxi, shezhi, dingdan, xiaoxi } = this.state
+        let { data, quanbu, xinxi, shezhi, dingdan, xiaoxi, login } = this.state
 
         return (
             <div className="Mine">
@@ -96,7 +101,7 @@ class Mine extends Component {
                     <i className="iconfont icon-shezhi" onClick={this.goto.bind(this, shezhi)}></i>
                     <i className="iconfont icon-xiaoxi" onClick={this.goto3.bind(this, xiaoxi)}></i>
                 </div>
-                <div className="geren">
+                <div className="geren" onClick={this.goto4.bind(this, login)}>
                     <img src={[require("../../images/touxiang.jpg")]} alt="" />
                     <span className="title">书生</span>
                 </div>
